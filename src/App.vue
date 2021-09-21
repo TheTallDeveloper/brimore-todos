@@ -1,15 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div>
+<a-typography-title :level='1'>Welcome to my Todo App!</a-typography-title>
+</div>
+<div>
+  <addTask text="Add Task"/>
+</div>
+<div>
+  <Tasks />
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import addTask from './components/addTask.vue';
+import Tasks from './components/Tasks.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    addTask,
+    Tasks,
   },
 };
 </script>
@@ -22,5 +31,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  width: 500px;
+  margin: auto;
+}
+h1 {
+  color: rgb(48, 98, 238);
 }
 </style>
