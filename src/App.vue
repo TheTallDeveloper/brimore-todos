@@ -3,22 +3,19 @@
 <a-typography-title :level='1'>Welcome to my Todo App!</a-typography-title>
 </div>
 <div>
-  <addTask text="Add Task"/>
+  <Todo />
 </div>
 <div>
-  <Tasks />
 </div>
 </template>
 
 <script>
-import addTask from './components/addTask.vue';
-import Tasks from './components/Tasks.vue';
+import Todo from './components/Todo.vue';
 
 export default {
   name: 'App',
   components: {
-    addTask,
-    Tasks,
+    Todo,
   },
 };
 </script>
