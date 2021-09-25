@@ -31,7 +31,5 @@ export default {
   width: 500px;
   margin: auto;
 }
-h1 {
-  color: rgb(48, 98, 238);
-}
+
 </style>
