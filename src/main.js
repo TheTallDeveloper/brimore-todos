@@ -5,4 +5,5 @@ import store from './store';
 
 const app = createApp(App);
 app.config.productionTip = false;
+
 app.use(Antd).use(store).mount('#app');

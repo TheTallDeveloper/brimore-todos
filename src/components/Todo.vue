@@ -1,54 +1,32 @@
 <template>
-  <div class="addTask">
-    <a-typography-title :level="4">{{ $store.state.text }}</a-typography-title>
-    <a-input class="text" v-model="text" placeholder="Enter Task" />
-    <hr />
-    <a-button class="button" @click="insertTodo" type="primary">Add Task</a-button>
-  </div>
+<addTodo />
   <div>
     <h3>Tasks</h3>
     <div class="task-container">
       <div class="task"
-      v-for="(todos, index) in todos"
-      v-bind:item="todos"
-      v-bind:index="index"
-      v-bind:key="todos.title"
-      @dblclick="deleteTodo()">
-      <a-list-item>{{ todos.title }}</a-list-item>
+      v-for="(todo, index) in this.$store.state.todos"
+      v-bind:key="todo.id">
+      <TodoItem
+        class="list-item"
+        v-bind:index="index"
+        :todoId="todo.id" :title="todo.title" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import api from '../core/api';
+import addTodo from './addTodo.vue';
+import TodoItem from './TodoItem.vue';
 
 export default {
   name: 'Todo',
-  data() {
-    return {
-      text: '',
-      todos: [],
-    };
-  },
-  methods: {
-    insertTodo() {
-      api.postTodo(this.text);
-      console.log('inserted');
-    },
-    updateTodo(text, id) {
-      api.updateTodo(text, id);
-      console.log('updted');
-    },
-    deleteTodo(id) {
-      console.log('deleted');
-      api.deleteTodo(id);
-    },
+  components: {
+    addTodo,
+    TodoItem,
   },
   mounted() {
-    console.log('started');
-    api.getTodos()
-      .then((response) => { this.todos = response; });
+    this.$store.dispatch('getData');
   },
 };
 </script>
@@ -65,7 +43,7 @@ export default {
   margin-bottom: 5px;
 }
 .button {
-  font-size: 15px;
+  font-size: 10px;
   color: white;
   background-color: rgb(81, 81, 250);
 }
@@ -74,5 +52,11 @@ div.task {
   background-color: #bcffb8;
   padding: 10px;
   margin-bottom: 10px;
+}
+.list-item {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 </style>

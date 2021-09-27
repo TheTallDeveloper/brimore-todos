@@ -15,7 +15,7 @@ class Todos {
       title: text,
       body: 'body',
       userId: 1,
-    });
+    }).then((response) => response.data);
   }
 
   static updateTodo(text, id) {
