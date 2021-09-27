@@ -1,9 +1,9 @@
 # Todo App
 
 # Submitted
--Created a three new componets to review, add, update and delete the data in a good format.
--Api file has been created to manage CRUD functions.
--Store folder has been created to use the Centralized Data.
+- Created a three new componets to review, add, update and delete the data in a good format.
+- Api file has been created to manage CRUD functions.
+- Store folder has been created to use the Centralized Data.
 
 ## How it works?
 - After following the below steps in the setup section so you will be able to use it.
