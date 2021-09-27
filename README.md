@@ -1,11 +1,11 @@
 # Todo App
 
-#Submitted
+# Submitted
 -Created a three new componets to review, add, update and delete the data in a good format
 -Api file has been created to manage CRUD functions
 -Store folder has been created to use the Centralized Data
 
-##How it works?
+## How it works?
 -After following the below steps in the setup section so you will be able to use it
 -The coming list from the Todos api will appear once it's started
 -You can ADD a new Task in the Add Tasks input, once tou click the Add Task button, the new task will be added at the end of the list
