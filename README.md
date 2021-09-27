@@ -1,5 +1,18 @@
 # Todo App
 
+#Submitted
+-Created a three new componets to review, add, update and delete the data in a good format
+-Api file has been created to manage CRUD functions
+-Store folder has been created to use the Centralized Data
+
+##How it works?
+-After following the below steps in the setup section so you will be able to use it
+-The coming list from the Todos api will appear once it's started
+-You can ADD a new Task in the Add Tasks input, once tou click the Add Task button, the new task will be added at the end of the list
+-You can UPDATE the task by a double click over the task you want to update it, you will get a new input space to update the task
+-You can DELEYE the task by simply clicking the Delete button in each task
+
+
 So here you are! We need your help with a small Todo App. We already setup a brand new project for you that already contains a very basic Vue.js setup.
 Your task is now to finish the Todo App by completing the features to add, edit and delete todos by using [JSONplaceholder](https://jsonplaceholder.typicode.com/).
 
